@@ -310,6 +310,14 @@ var (
 		  Resources: []ResourceTypes{ Pod, },
         }
 	
+		SidecarProxyCPULimit = Instance {
+          Name: "sidecar.istio.io/proxyCPULimit",
+          Description: "Specifies the CPU limit setting for the Envoy sidecar.",
+          Hidden: false,
+          Deprecated: false,
+		  Resources: []ResourceTypes{ Pod, },
+        }
+	
 		SidecarProxyImage = Instance {
           Name: "sidecar.istio.io/proxyImage",
           Description: "Specifies the Docker image to be used by the Envoy "+
@@ -323,6 +331,14 @@ var (
           Name: "sidecar.istio.io/proxyMemory",
           Description: "Specifies the requested memory setting for the Envoy "+
                         "sidecar.",
+          Hidden: false,
+          Deprecated: false,
+		  Resources: []ResourceTypes{ Pod, },
+        }
+	
+		SidecarProxyMemoryLimit = Instance {
+          Name: "sidecar.istio.io/proxyMemoryLimit",
+          Description: "Specifies the memory limit setting for the Envoy sidecar.",
           Hidden: false,
           Deprecated: false,
 		  Resources: []ResourceTypes{ Pod, },
